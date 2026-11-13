@@ -1,0 +1,35 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.lead {
+  background: $dark;
+  color: #fff;
+
+  &__inner {
+    display: grid;
+    gap: 24px;
+
+    @include from($desktop) {
+      grid-template-columns: 1fr 440px;
+      gap: 64px;
+      align-items: center;
+    }
+
+    @include from($wide) {
+      grid-template-columns: 1fr 480px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    max-width: 460px;
+    color: $on-dark;
+
+    @include from($tablet) {
+      font-size: $fs-md;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.header {
+  background: $dark;
+  color: #fff;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+
+    @include from($tablet) {
+      height: 72px;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include from($tablet) {
+      display: flex;
+      gap: 32px;
+    }
+  }
+
+  &__link {
+    color: $on-dark;
+    font-size: $fs-sm;
+    text-decoration: none;
+
+    @include hover {
+      color: #fff;
+    }
+  }
+
+  &__phone {
+    font-weight: $fw-medium;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+}

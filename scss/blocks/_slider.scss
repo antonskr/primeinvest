@@ -1,0 +1,105 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.slider {
+  --slide-width: 86%;
+  --slide-gap: 8px;
+  --bleed: 16px;
+
+  @include from($tablet) {
+    --slide-width: 520px;
+    --slide-gap: 16px;
+    --bleed: 24px;
+  }
+
+  @include from($desktop) {
+    --slide-width: 100%;
+    --slide-gap: 24px;
+    --bleed: 0px;
+  }
+
+  &__viewport {
+    @include from($desktop) {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) 44px;
+      gap: 24px;
+      align-items: center;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+  }
+
+  &__track {
+    position: relative;
+    display: flex;
+    gap: var(--slide-gap);
+    margin: 0 calc(var(--bleed) * -1);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    @include hide-scrollbar;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 0 0 calc((100% - var(--slide-width)) / 2 - var(--slide-gap));
+    }
+
+    @include from($desktop) {
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__slide {
+    flex: 0 0 var(--slide-width);
+    min-width: 0;
+    scroll-snap-align: center;
+  }
+
+  &__arrow {
+    display: none;
+
+    @include from($desktop) {
+      display: grid;
+      place-items: center;
+      @include circle(44px);
+      padding: 0;
+      border: 1px solid $line;
+      background: #fff;
+      cursor: pointer;
+      transition: opacity 0.2s, border-color 0.15s;
+
+      @include hover {
+        border-color: $text;
+      }
+
+      &:disabled {
+        opacity: 0.35;
+        cursor: default;
+        border-color: $line;
+      }
+    }
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  &__dot {
+    @include circle(24px);
+    padding: 8px;
+    border: 0;
+    background: #c3c9c4 content-box;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+
+    &--active {
+      background-color: $green;
+      transform: scale(1.35);
+    }
+  }
+}

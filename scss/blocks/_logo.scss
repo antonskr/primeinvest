@@ -1,0 +1,17 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.logo {
+  font-size: $fs-lg;
+  font-weight: $fw-bold;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+
+  &__accent {
+    color: $green;
+  }
+
+  &--light &__accent {
+    color: $yellow;
+  }
+}

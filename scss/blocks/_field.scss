@@ -1,0 +1,77 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.field {
+  & + & {
+    margin-top: 16px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+  }
+
+  &__input {
+    width: 100%;
+    height: $control-height;
+    padding: 0 14px;
+    border: 1px solid $border;
+    border-radius: $radius;
+    background: #fff;
+    font-size: $fs-base;
+
+    &:focus {
+      @include focus-ring($green);
+    }
+  }
+
+  &__input::placeholder {
+    color: #a3aaa5;
+  }
+
+  .iti {
+    display: block;
+  }
+
+  &__link {
+    @include button-reset;
+    text-decoration: underline;
+  }
+
+  &__check {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: $fs-sm;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: $green;
+  }
+
+  &__error {
+    display: block;
+    margin-top: 4px;
+    font-size: $fs-xs;
+    color: $red;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &--invalid &__input {
+    border-color: $red;
+
+    &:focus {
+      @include focus-ring($red);
+    }
+  }
+}

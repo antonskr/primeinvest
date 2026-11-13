@@ -1,0 +1,39 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.timer {
+  display: flex;
+  gap: 8px;
+  font-variant-numeric: tabular-nums;
+
+  &__cell {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 8px 10px;
+    border-radius: $radius;
+    background: $on-dark-surface;
+  }
+
+  &__num {
+    @include heading($fs-xxl, 1);
+  }
+
+  &__label {
+    margin-top: 6px;
+    font-size: $fs-xs;
+    color: $on-dark-dim;
+  }
+
+  &__sep {
+    align-self: center;
+    padding-bottom: 20px;
+    @include heading($fs-xl);
+    color: $on-dark-dim;
+  }
+
+  &--done &__num {
+    color: $on-dark-dim;
+  }
+}

@@ -1,0 +1,83 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.hero {
+  padding: 28px 0 48px;
+  background: $dark;
+  color: #fff;
+
+  @include from($tablet) {
+    padding: 48px 0 72px;
+  }
+
+  @include from($desktop) {
+    padding: 72px 0 104px;
+  }
+
+  &__inner {
+    display: grid;
+    gap: 36px;
+
+    @include from($desktop) {
+      grid-template-columns: 1fr 380px;
+      gap: 64px;
+      align-items: center;
+    }
+
+    @include from($wide) {
+      grid-template-columns: 1fr 400px;
+      gap: 96px;
+    }
+  }
+
+  &__title {
+    @include title-hero;
+  }
+
+  &__text {
+    max-width: 540px;
+    margin-top: 16px;
+    font-size: $fs-md;
+    color: $on-dark;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 28px;
+
+    @include from($tablet) {
+      width: auto;
+      min-width: 240px;
+    }
+  }
+
+  &__note {
+    margin-top: 12px;
+    font-size: $fs-xs;
+    text-align: center;
+    color: $on-dark-dim;
+
+    @include from($tablet) {
+      text-align: left;
+    }
+  }
+
+  &__offer {
+    @include card(24px 20px, $dark-light);
+
+    @include from($tablet) {
+      max-width: 400px;
+      padding: 32px;
+    }
+  }
+
+  &__offer-title {
+    @include heading($fs-lg);
+  }
+
+  &__offer-text {
+    margin: 6px 0 20px;
+    font-size: $fs-sm;
+    color: $on-dark;
+  }
+}

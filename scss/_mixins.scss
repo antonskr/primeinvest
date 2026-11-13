@@ -1,0 +1,83 @@
+@use 'variables' as *;
+
+@mixin from($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin heading($size, $line-height: 1.2) {
+  font-size: $size;
+  font-weight: $fw-bold;
+  line-height: $line-height;
+}
+
+@mixin title-hero {
+  @include heading(34px, 1.1);
+  letter-spacing: -0.02em;
+
+  @include from($tablet) {
+    font-size: 48px;
+  }
+
+  @include from($desktop) {
+    font-size: 56px;
+  }
+
+  @include from($wide) {
+    font-size: 64px;
+  }
+}
+
+@mixin title-section {
+  @include heading($fs-xl);
+
+  @include from($tablet) {
+    font-size: 32px;
+  }
+
+  @include from($desktop) {
+    font-size: 36px;
+  }
+}
+
+@mixin card($padding, $bg: #fff) {
+  padding: $padding;
+  border-radius: $radius-lg;
+  background: $bg;
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+@mixin focus-ring($color) {
+  outline: none;
+  border-color: $color;
+  box-shadow: 0 0 0 3px rgba($color, 0.15);
+}
+
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

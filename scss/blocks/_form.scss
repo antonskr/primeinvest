@@ -1,0 +1,40 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.form {
+  width: 100%;
+  max-width: 480px;
+  @include card(24px 20px);
+  color: $text;
+
+  @include from($tablet) {
+    padding: 32px;
+  }
+
+  &__progress {
+    margin-bottom: 16px;
+    font-size: $fs-sm;
+    color: $gray;
+  }
+
+  &__btn {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  &__actions &__btn {
+    margin-top: 0;
+    padding: 0 12px;
+  }
+
+  &__back {
+    flex-shrink: 0;
+    padding: 0 16px;
+  }
+}

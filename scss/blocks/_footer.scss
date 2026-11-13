@@ -1,0 +1,34 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.footer {
+  padding: 28px 0 96px;
+  background: $dark-deep;
+  font-size: $fs-xs;
+  color: $on-dark-dim;
+
+  @include from($desktop) {
+    padding: 32px 0;
+  }
+
+  &__inner {
+    display: grid;
+    gap: 12px;
+
+    @include from($desktop) {
+      grid-template-columns: auto minmax(0, 560px) auto;
+      gap: 48px;
+      justify-content: space-between;
+    }
+  }
+
+  &__copy {
+    color: #fff;
+  }
+
+  &__link {
+    @include hover {
+      color: #fff;
+    }
+  }
+}

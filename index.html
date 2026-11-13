@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PrimeInvest — інвестиції від 10 000 грн</title>
+  <meta name="description" content="Підберемо інвестиційний портфель під вашу мету та строк, відкриємо рахунок онлайн. Мінімальна сума 10 000 грн, перша консультація безкоштовна.">
+  <meta name="theme-color" content="#10201a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PrimeInvest — інвестиції від 10 000 грн">
+  <meta property="og:description" content="Портфель під вашу мету та строк. Перша консультація безкоштовна.">
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@29.5.11/dist/css/intlTelInput.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo logo--light" href="#hero">Prime<span class="logo__accent">Invest</span></a>
+
+      <nav class="header__nav" aria-label="Розділи сторінки">
+        <a class="header__link" href="#about">Про нас</a>
+        <a class="header__link" href="#reviews">Відгуки</a>
+        <a class="header__link" href="#faq">Питання</a>
+      </nav>
+
+      <a class="header__phone" href="tel:+380800000000">0 800 000 000</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">Почніть інвестувати з&nbsp;10&nbsp;000&nbsp;грн</h1>
+          <p class="hero__text">Підберемо портфель під вашу мету та строк, відкриємо рахунок онлайн. Перша консультація безкоштовна.</p>
+          <a class="btn hero__btn js-cta" href="#lead">Почати зараз</a>
+          <p class="hero__note">Передзвонимо протягом 15 хвилин у робочий час</p>
+        </div>
+
+        <div class="hero__offer">
+          <h2 class="hero__offer-title">Три місяці без комісії</h2>
+          <p class="hero__offer-text">Якщо залишите заявку, поки йде таймер</p>
+
+          <div class="timer" role="timer" aria-label="До кінця пропозиції">
+            <div class="timer__cell">
+              <span class="timer__num timer__num--min">15</span>
+              <span class="timer__label">хвилин</span>
+            </div>
+            <span class="timer__sep" aria-hidden="true">:</span>
+            <div class="timer__cell">
+              <span class="timer__num timer__num--sec">00</span>
+              <span class="timer__label">секунд</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container about__inner">
+        <img class="about__img"
+             src="img/about-800.webp"
+             srcset="img/about-480.webp 480w, img/about-800.webp 800w, img/about-1120.webp 1120w"
+             sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, (min-width: 768px) 640px, calc(100vw - 32px)"
+             width="800" height="534"
+             alt="Команда PrimeInvest в офісі"
+             loading="lazy" decoding="async">
+
+        <div class="about__content">
+          <h2 class="section__title">Про нас</h2>
+          <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+          <p class="about__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+
+          <ul class="about__facts">
+            <li class="about__fact"><b class="about__num">12&nbsp;400</b> клієнтів</li>
+            <li class="about__fact"><b class="about__num">4,1&nbsp;млрд&nbsp;грн</b> в управлінні</li>
+            <li class="about__fact"><b class="about__num">9&nbsp;з&nbsp;10</b> клієнтів залишаються на другий рік</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--gray" id="reviews">
+      <div class="container">
+        <h2 class="section__title">Відгуки клієнтів</h2>
+
+        <div class="slider">
+          <div class="slider__viewport">
+            <button class="slider__arrow slider__arrow--prev" type="button" aria-label="Попередній відгук">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg>
+            </button>
+
+            <ul class="slider__track">
+              <li class="slider__slide">
+                <article class="review">
+                  <div class="review__author">
+                    <img class="review__photo" src="img/reviews/review-1.webp" width="64" height="64" alt="" loading="lazy" decoding="async">
+                    <div>
+                      <h3 class="review__name">Марина Коваленко</h3>
+                      <p class="review__meta">Львів, з нами з 2022 року</p>
+                    </div>
+                  </div>
+                  <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                </article>
+              </li>
+              <li class="slider__slide">
+                <article class="review">
+                  <div class="review__author">
+                    <img class="review__photo" src="img/reviews/review-2.webp" width="64" height="64" alt="" loading="lazy" decoding="async">
+                    <div>
+                      <h3 class="review__name">Андрій Мельник</h3>
+                      <p class="review__meta">Харків, з нами з 2021 року</p>
+                    </div>
+                  </div>
+                  <p class="review__text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                </article>
+              </li>
+              <li class="slider__slide">
+                <article class="review">
+                  <div class="review__author">
+                    <img class="review__photo" src="img/reviews/review-3.webp" width="64" height="64" alt="" loading="lazy" decoding="async">
+                    <div>
+                      <h3 class="review__name">Катерина Бондар</h3>
+                      <p class="review__meta">Київ, з нами з 2023 року</p>
+                    </div>
+                  </div>
+                  <p class="review__text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Quis autem vel eum iure reprehenderit.</p>
+                </article>
+              </li>
+              <li class="slider__slide">
+                <article class="review">
+                  <div class="review__author">
+                    <img class="review__photo" src="img/reviews/review-4.webp" width="64" height="64" alt="" loading="lazy" decoding="async">
+                    <div>
+                      <h3 class="review__name">Тарас Ткаченко</h3>
+                      <p class="review__meta">Одеса, з нами з 2020 року</p>
+                    </div>
+                  </div>
+                  <p class="review__text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.</p>
+                </article>
+              </li>
+            </ul>
+
+            <button class="slider__arrow slider__arrow--next" type="button" aria-label="Наступний відгук">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7.5 4.5 13 10l-5.5 5.5"/></svg>
+            </button>
+          </div>
+
+          <div class="slider__dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container faq__inner">
+        <h2 class="section__title">Часті питання</h2>
+
+        <ul class="faq__list">
+          <li class="faq__item faq__item--open">
+            <h3 class="faq__title">
+              <button class="faq__question" type="button" aria-expanded="true" aria-controls="faq-1">
+                З якої суми можна почати?
+                <span class="faq__icon"></span>
+              </button>
+            </h3>
+            <div class="faq__answer" id="faq-1">
+              <div class="faq__body">
+                <p class="faq__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__title">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-2">
+                Чи гарантуєте ви дохідність?
+                <span class="faq__icon"></span>
+              </button>
+            </h3>
+            <div class="faq__answer" id="faq-2">
+              <div class="faq__body">
+                <p class="faq__text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
+            </div>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__title">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-3">
+                Скільки коштує обслуговування?
+                <span class="faq__icon"></span>
+              </button>
+            </h3>
+            <div class="faq__answer" id="faq-3">
+              <div class="faq__body">
+                <p class="faq__text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </div>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__title">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-4">
+                Чи можна забрати гроші раніше строку?
+                <span class="faq__icon"></span>
+              </button>
+            </h3>
+            <div class="faq__answer" id="faq-4">
+              <div class="faq__body">
+                <p class="faq__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+              </div>
+            </div>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__title">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-5">
+                Де зберігаються мої гроші?
+                <span class="faq__icon"></span>
+              </button>
+            </h3>
+            <div class="faq__answer" id="faq-5">
+              <div class="faq__body">
+                <p class="faq__text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+              </div>
+            </div>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__title">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-6">
+                Чи потрібно самому сплачувати податки?
+                <span class="faq__icon"></span>
+              </button>
+            </h3>
+            <div class="faq__answer" id="faq-6">
+              <div class="faq__body">
+                <p class="faq__text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+              </div>
+            </div>
+          </li>
+          <li class="faq__item">
+            <h3 class="faq__title">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-7">
+                Що буде після заявки?
+                <span class="faq__icon"></span>
+              </button>
+            </h3>
+            <div class="faq__answer" id="faq-7">
+              <div class="faq__body">
+                <p class="faq__text">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section lead" id="lead">
+      <div class="container lead__inner">
+        <div class="lead__info">
+          <h2 class="section__title lead__title">Залиште заявку</h2>
+          <p class="lead__text">Передзвонимо, відповімо на питання й домовимося про час консультації. Це безкоштовно.</p>
+        </div>
+
+        <form class="form" action="#" method="post" novalidate>
+          <p class="form__progress">Крок <span class="form__step-num">1</span> з 2</p>
+
+          <fieldset class="form__step">
+            <legend class="visually-hidden">Контактні дані</legend>
+
+            <div class="field">
+              <label class="field__label" for="lead-name">Ім'я</label>
+              <input class="field__input" id="lead-name" name="name" type="text" autocomplete="given-name" aria-describedby="lead-name-error">
+              <span class="field__error" id="lead-name-error" aria-live="polite"></span>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="lead-email">Email</label>
+              <input class="field__input" id="lead-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="name@gmail.com" aria-describedby="lead-email-error">
+              <span class="field__error" id="lead-email-error" aria-live="polite"></span>
+            </div>
+
+            <button class="btn form__btn" type="submit">Далі</button>
+          </fieldset>
+
+          <fieldset class="form__step" hidden>
+            <legend class="visually-hidden">Телефон і згода</legend>
+
+            <div class="field">
+              <label class="field__label" for="lead-phone">Телефон</label>
+              <input class="field__input" id="lead-phone" name="phone" type="tel" autocomplete="tel-national" aria-describedby="lead-phone-error">
+              <span class="field__error" id="lead-phone-error" aria-live="polite"></span>
+            </div>
+
+            <div class="field">
+              <label class="field__check">
+                <input class="field__checkbox" name="agree" type="checkbox">
+                <span>Погоджуюся на обробку <button class="field__link" type="button" data-modal="modal-consent">персональних даних</button></span>
+              </label>
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+
+            <div class="form__actions">
+              <button class="btn btn--ghost form__back" type="button">Назад</button>
+              <button class="btn form__btn form__submit" type="submit">Надіслати заявку</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© 2026 PrimeInvest</p>
+      <p class="footer__note">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <a class="footer__link" href="#">Політика конфіденційності</a>
+    </div>
+  </footer>
+
+  <div class="sticky-cta">
+    <div class="container sticky-cta__inner">
+      <span class="logo sticky-cta__logo">Prime<span class="logo__accent">Invest</span></span>
+      <p class="sticky-cta__text">Три місяці без комісії <span class="sticky-cta__time">15:00</span></p>
+      <a class="btn btn--small js-cta" href="#lead">Почати зараз</a>
+    </div>
+  </div>
+
+  <dialog class="modal" id="modal-success" aria-labelledby="modal-title">
+    <form class="modal__inner" method="dialog">
+      <svg class="modal__icon" width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true">
+        <circle cx="28" cy="28" r="28" fill="#e3f3ea"/>
+        <path d="m18 28.5 7 7 13-14" stroke="#128553" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h2 class="modal__title" id="modal-title">Заявку прийнято</h2>
+      <p class="modal__text">Дякуємо! Передзвонимо протягом 15 хвилин у робочий час.</p>
+      <button class="btn modal__btn">Добре</button>
+    </form>
+  </dialog>
+
+  <dialog class="modal modal--text" id="modal-consent" aria-labelledby="consent-title">
+    <form class="modal__inner" method="dialog">
+      <h2 class="modal__title" id="consent-title">Згода на обробку персональних даних</h2>
+      <p class="modal__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="modal__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <button class="btn modal__btn">Зрозуміло</button>
+    </form>
+  </dialog>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.about {
+  &__inner {
+    display: grid;
+    gap: 28px;
+
+    @include from($desktop) {
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    @include from($wide) {
+      gap: 80px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 640px;
+    border-radius: $radius-lg;
+  }
+
+  &__text {
+    @include from($desktop) {
+      font-size: $fs-md;
+    }
+
+    & + & {
+      margin-top: 12px;
+    }
+  }
+
+  &__facts {
+    margin-top: 28px;
+
+    @include from($tablet) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+
+  &__fact {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 12px 0;
+    border-top: 1px solid $line;
+    font-size: $fs-sm;
+    color: $gray;
+
+    @include from($tablet) {
+      display: block;
+      padding: 16px 0 0;
+    }
+  }
+
+  &__num {
+    flex: 0 0 140px;
+    font-size: $fs-lg;
+    font-weight: $fw-bold;
+    white-space: nowrap;
+    color: $text;
+
+    @include from($tablet) {
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+}
